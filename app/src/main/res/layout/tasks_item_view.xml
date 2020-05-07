@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_background">
+
+    <TextView
+        android:id="@+id/item_task"
+        android:layout_width="369dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/item_view_task"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_note"
+        android:layout_width="370dp"
+        android:layout_height="75dp"
+        android:text="@string/item_view_note"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/item_task"
+        app:layout_constraintStart_toStartOf="@+id/item_task"
+        app:layout_constraintTop_toBottomOf="@+id/item_task" />
+
+    <ImageButton
+        android:id="@+id/item_statusImg"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:contentDescription="@string/item_todo_status"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="@+id/item_task"
+        app:layout_constraintTop_toBottomOf="@+id/item_note"
+        app:srcCompat="@android:drawable/presence_online"
+        />
+
+
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="133dp"
+        android:layout_height="19dp"
+        android:text="@string/item_status"
+        app:layout_constraintBottom_toBottomOf="@+id/item_statusImg"
+        app:layout_constraintStart_toEndOf="@+id/item_statusImg"
+        app:layout_constraintTop_toTopOf="@+id/item_statusImg" />
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="72dp"
+        android:layout_height="25dp"
+        android:text="@string/item_date"
+        app:layout_constraintEnd_toEndOf="@+id/item_task"
+        app:layout_constraintTop_toBottomOf="@+id/item_note" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
